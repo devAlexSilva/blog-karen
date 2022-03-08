@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    width: 100%;
+    font-size: 3rem;
+    background-color: rgba(0, 255, 255, 0.13);
+    
+}
+
+.nav > div {
+    display: flex;
+}
+
+.nav .center:hover {
+    background-color: aqua;
+    padding: .8rem 1.5rem;
+    cursor: pointer;
+}
+
+.nav .left > div,
+.nav .right > div {
+    margin: 1rem;
+}
+
+.nav .left > div:hover,
+.nav .right > div:hover {
+    border-bottom: .2rem solid salmon;
+    transition: 2s ease-in-out;
+    cursor: pointer;
+}
