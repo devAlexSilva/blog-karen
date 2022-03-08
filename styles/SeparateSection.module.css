@@ -1,0 +1,13 @@
+.break {
+    height: 10vh;
+    width: 100%;
+    
+}
+
+.break > hr {
+    border: 0;
+    height: 1vh;
+    position: relative;
+    top: 4vh;
+    background-image: linear-gradient(to right, transparent, rgba(44, 42, 177, 0.308), transparent); 
+}

@@ -1,0 +1,17 @@
+.content .text {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .content .text .title {
+    margin: 0 auto;
+  }
+  
+.content .img {
+    width: 60rem;
+    height: 90vh;
+  }
+  

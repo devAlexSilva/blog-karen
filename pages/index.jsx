@@ -3,6 +3,7 @@ import Home from '../components/home'
 import Layout from '../components/layout'
 import HighLights from '../components/highlights'
 import About from '../components/about'
+import SeparateSection from '../components/separateSection'
 
 export default function Index() {
   return (
@@ -12,8 +13,10 @@ export default function Index() {
       </Head>
 
         <Home />
-        <About />
+        <SeparateSection />
         <HighLights />
+        <SeparateSection />
+        <About />
       
     </Layout>
   )

@@ -6,17 +6,21 @@ export default function Header() {
         <>
             <nav className={styles.nav}>
                 <div className={styles.left}>
-                    <div>aaaaa</div>
-                    <div>bbbbb</div>
-                    <div>ccccc</div>
+                    <Link href='#highlights'>
+                        <div>Destaques</div>
+                    </Link>
+                    <div style={{ cursor: 'default', border: 'none' }}>|</div>
+                    <div>Produtos &#10138;</div>
                 </div>
-                <Link about='home' href='/'>
+                <Link href='/'>
                     <div className={styles.center}>HOME</div>
                 </Link>
                 <div className={styles.right}>
-                    <div>aaaaa</div>
-                    <div>bbbbb</div>
-                    <div>ccccc</div>
+                    <div>Blog &#10138;</div>
+                    <div style={{ cursor: 'default', border: 'none' }}>|</div>
+                    <Link href='#about'>
+                        <div>Sobre</div>
+                    </Link>
                 </div>
             </nav>
         </>

@@ -7,7 +7,7 @@
     z-index: 1000;
     height: 10vh;
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     background-color: rgba(240, 248, 255);
     
 }
@@ -16,10 +16,32 @@
     display: flex;
 }
 
-.nav .center:hover {
-    background-color: aqua;
-    padding: .8rem 1.5rem;
+.nav .center {
+    position: relative;
     cursor: pointer;
+    font-weight: 600;
+    opacity: .8;
+}
+
+.nav .center::before,
+.nav .center::after {
+    content: 'HOME';
+    position: absolute;
+    top: 0; left: 0;
+    color: #fff;
+    z-index: -1;
+}
+
+.nav .center::before {
+    transform: translate(-.5rem, -.5rem);
+    text-shadow: .1rem .1rem .5rem #9901ff;
+    opacity: 1;
+}
+
+.nav .center::after {
+    transform: translate(.5rem, .5rem);
+    text-shadow: .5rem .5rem .5rem #cf0c0c;
+    opacity: 1;
 }
 
 .nav .left > div,

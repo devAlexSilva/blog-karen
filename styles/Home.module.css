@@ -1,21 +1,7 @@
 .section {
-  background-color: blanchedalmond;
+  background-color: #ECE7E1;
   color: black;
   height: 90vh;
   margin-top: 10vh;
   overflow: hidden;
-}
-
-.section .content .text {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  text-align: center;
-  font-size: 2rem;
-  margin-left: 2rem;
-}
-
-.section .content .img {
-  width: 80rem;
-  height: 90vh;
 }
