@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { getAllInDocument } from '../prismic/query';
 import styles from '../styles/HighLights.module.css'
+import { getAllInDocument } from '../prismic/query';
+import { useEffect, useRef, useState } from 'react';
 
 export default function HighLights() {
 

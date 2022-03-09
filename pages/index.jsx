@@ -11,13 +11,11 @@ export default function Index() {
       <Head>
         <title>Blog da Juvia</title>
       </Head>
-
         <Home />
         <SeparateSection />
         <HighLights />
         <SeparateSection />
         <About />
-      
     </Layout>
   )
 }

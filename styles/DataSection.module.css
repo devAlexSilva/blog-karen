@@ -1,17 +1,42 @@
-.content .text {
+/*  .body {
+    background-color: brown;
+    
+  }
+
+  .text {
     display: flex;
     justify-content: left;
     align-items: center;
     text-align: center;
     font-size: 1.8rem;
+    
   }
 
-  .content .text .title {
+  .text .info {
     margin: 0 auto;
   }
-  
-.content .img {
-    width: 60rem;
-    height: 90vh;
+  */
+  .info {
+    display: flex;
+    margin-top: 10vh;
+    width: 100vw;
+    
   }
+
+  .info .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    z-index: 9;
   
+    margin: 0 auto;
+    font-size: 1.7rem;
+  }
+
+  .info div img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100%; 
+  }
