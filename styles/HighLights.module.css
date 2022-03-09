@@ -11,28 +11,34 @@
   max-width: 75vw;
 }
 
-.container .carroussel {
+.container .caroussel {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  
 }
 
-.container .carroussel .item {
+.container .caroussel::-webkit-scrollbar {
+  display: none;
+}
+
+.container .caroussel .item {
   background-color: #f5f5;
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
   width: 28rem;
+  flex: none;
 }
 
-.container .carroussel .item li > img {
+.container .caroussel .item li > img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
   object-fit: cover;
 }
 
-.container .carroussel .item .name {
+.container .caroussel .item .name {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,4 +47,21 @@
   font-weight: 600;
   margin-top: 2rem;
   height: 10rem;
+}
+
+.container .arrows {
+  width: 100%;
+  text-align: center;
+}
+
+.container .arrows > * {
+  border: none;
+  cursor: pointer;
+  margin: .5rem 1rem;
+}
+
+
+.container .arrows .arrow_right:hover,
+.container .arrows .arrow_left:hover {
+  transform: scale(1.1);
 }
