@@ -1,5 +1,5 @@
 import { RichText } from 'prismic-reactjs'
-import getData from '../prismic/query'
+import { getAllInDocument } from '../prismic/query'
 import styles from '../styles/DataSection.module.css'
 import { useEffect, useState } from 'react'
 
@@ -8,7 +8,7 @@ export default function DataSection({ fieldToFetch, textLeft }) {
     const [dataSection, setDataSection] = useState([])
     useEffect(() => {
         const fetchData = async () => {
-            const dataInfoSection = await getData(fieldToFetch);
+            const dataInfoSection = await getAllInDocument(fieldToFetch);
             setDataSection(dataInfoSection[0].data);
         }
         fetchData();
