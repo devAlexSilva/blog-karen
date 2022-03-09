@@ -16,14 +16,16 @@ export default function HighLights() {
     }, []);
 
     const clickArrowLeft = () => {
-        carousselRef.current.scrollLeft -= carousselRef.current.offsetWidth - (0.4*carousselRef.current.offsetWidth);
+        carousselRef.current.scrollLeft -= carousselRef.current.offsetWidth - (0.4 * carousselRef.current.offsetWidth);
     }
     const clickArrowRight = () => {
-        carousselRef.current.scrollLeft += carousselRef.current.offsetWidth - (0.4*carousselRef.current.offsetWidth);
+        carousselRef.current.scrollLeft += carousselRef.current.offsetWidth - (0.4 * carousselRef.current.offsetWidth);
     }
 
     return (
-            <section className={styles.body} id='highlights'>
+        <>
+            <h2 className={styles.title_category} id='highlights'>DESTAQUES</h2>
+            <section className={styles.body}>
                 <div className={styles.container}>
                     <div className={styles.caroussel} ref={carousselRef}>
                         {
@@ -48,5 +50,6 @@ export default function HighLights() {
                     </div>
                 </div>
             </section>
+        </>
     )
 }

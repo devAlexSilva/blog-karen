@@ -1,5 +1,14 @@
+.title_category {
+  text-align: center;
+  text-shadow: 2rem 1.2rem .5rem #9901ff;
+  opacity: .9;
+  font-size: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 0;
+}
+
 .body {
-  background-color: azure;
+  
   color: black;
   display: flex;
   justify-content: center;
@@ -14,7 +23,6 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  
 }
 
 .container .caroussel::-webkit-scrollbar {
@@ -22,12 +30,13 @@
 }
 
 .container .caroussel .item {
-  background-color: #f5f5;
-  border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
-  width: 28rem;
+  width: 27rem;
   flex: none;
+  background-color: azure;
+  border-radius: 1.2rem;
+  border: .1rem solid black;
 }
 
 .container .caroussel .item li > img {
@@ -49,16 +58,18 @@
 }
 
 .container .arrows {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  text-align: center;
+  
 }
 
-.container .arrows > * {
+.container .arrows > *{
   border: none;
   cursor: pointer;
+  background-color: transparent;
   margin: .5rem 1rem;
 }
-
 
 .container .arrows .arrow_right:hover,
 .container .arrows .arrow_left:hover {

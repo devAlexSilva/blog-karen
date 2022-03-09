@@ -25,6 +25,10 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+body {
+  background: linear-gradient(180deg, #ECE7E1, azure);
+}
+
 a {
   color: inherit;
   text-decoration: none;
