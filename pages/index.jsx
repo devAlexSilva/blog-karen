@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <title>Blog da Juvia</title>
+        <title>e.vearte - homePage</title>
       </Head>
         <Home />
         <SeparateSection />

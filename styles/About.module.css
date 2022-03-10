@@ -1,3 +1,45 @@
 .section {
   color: black;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.content .h1 {
+  font-size: 3rem;
+  font-style: oblique;  
+}
+
+.content .p {
+  font-size: 1.8rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: justify;
+  max-width: 50rem;
+  list-style: disc;
+  
+}
+
+@media (max-width: 520px){
+  .section {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: max-content;
+    top: 0;
   }
+
+  .content .h1 {
+    position: absolute;
+    top: 7rem;
+  }
+}

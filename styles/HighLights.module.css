@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
 .container {
   max-width: 75vw;
@@ -37,6 +37,7 @@
   background-color: azure;
   border-radius: 1.2rem;
   border: .1rem solid black;
+  list-style: none;
 }
 
 .container .caroussel .item li > img {

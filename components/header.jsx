@@ -10,7 +10,7 @@ export default function Header() {
                         <div>Destaques</div>
                     </Link>
                     <div style={{ cursor: 'default', border: 'none' }}>|</div>
-                    <div>Produtos &#10138;</div>
+                    <div>Artes &#10138;</div>
                 </div>
                 <Link href='/'>
                     <div className={styles.center}>HOME</div>
