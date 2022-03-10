@@ -11,7 +11,6 @@ export default function HighLights({ field }) {
         const fetchData = async () => {
             const dataInfoHighLights = await getAllInDocument(field);
             setHighlights(dataInfoHighLights);
-            console.log(dataInfoHighLights)
         }
         fetchData();
     }, []);
