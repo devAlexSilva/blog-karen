@@ -26,7 +26,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: linear-gradient(180deg, rgb(225,227,215), azure);
+  background: linear-gradient(180deg, #ECE7E1, azure);
 }
 
 a {

@@ -26,7 +26,7 @@ export default function Home() {
                             height={dataSection.image?.dimensions.height}
                             src={dataSection?.image?.url}
                         />
-                  </div>
+                    </div>
                 }
                 <div className={styles.content}>
                     <div className={styles.h1}><RichText render={dataSection.title} /></div>
