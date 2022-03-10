@@ -2,15 +2,16 @@ import styles from '../styles/HighLights.module.css'
 import { getAllInDocument } from '../prismic/query';
 import { useEffect, useRef, useState } from 'react';
 
-export default function HighLights() {
+export default function HighLights({ field }) {
 
     const carousselRef = useRef(null);
     const [highlights, setHighlights] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
-            const dataInfoHighLights = await getAllInDocument('products');
+            const dataInfoHighLights = await getAllInDocument(field);
             setHighlights(dataInfoHighLights);
+            console.log(dataInfoHighLights)
         }
         fetchData();
     }, []);
@@ -24,16 +25,16 @@ export default function HighLights() {
 
     return (
         <>
-            <h2 className={styles.title_category} id='highlights'>DESTAQUES</h2>
+            <h2 className={styles.title_category} id='highlights'>DESTAQUES: {field.toUpperCase()}</h2>
             <section className={styles.body}>
                 <div className={styles.container}>
                     <div className={styles.caroussel} ref={carousselRef}>
                         {
-                            highlights.map((item) => {
+                            highlights.map((info) => {
                                 return (
-                                    <ul key={item.uid} className={styles.item}>
-                                        <li><img alt={`imagem para ${item.uid}`} src={item.data.image.url} /></li>
-                                        <li className={styles.name}>{item.data.name[0].text}</li>
+                                    <ul key={info.uid} className={styles.item}>
+                                        <li><img alt={`imagem para ${info.uid}`} src={info.data.image.url} /></li>
+                                        <li className={styles.name}>{info.data.name[0].text}</li>
                                     </ul>
                                 );
                             })

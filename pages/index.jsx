@@ -13,7 +13,8 @@ export default function Index() {
       </Head>
         <Home />
         <SeparateSection />
-        <HighLights />
+        <HighLights field='products'/>
+        <HighLights field='posts'/>
         <SeparateSection />
         <About />
     </Layout>

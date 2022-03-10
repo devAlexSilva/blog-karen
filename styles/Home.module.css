@@ -1,7 +1,6 @@
 .section {
-  /*background-color: #ECE7E1;*/
   color: black;
-  margin-top: 10vh;
+  margin-top: 9vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,16 +16,16 @@
 }
 
 .content .h1 {
-  font-size: 3rem;
-  font-style: oblique;  
+  font-size: 3.2rem;
+  font-style: oblique;
+  font-family: 'Sansita Swashed', cursive;
 }
 
 .content .p {
-  font-size: 1.8rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.7rem;
+  font-family: cursive;
   text-align: center;
-  max-width: 50rem;
-  
+  max-width: 50rem;  
 }
 
 @media (max-width: 520px){
