@@ -25,6 +25,7 @@ export default function About() {
                             width={dataSection.image?.dimensions.width}
                             height={dataSection.image?.dimensions.height}
                             src={dataSection?.image?.url}
+                            loading='lazy'
                         />
                     </div>
                 }

@@ -1,0 +1,30 @@
+.layout_posts {
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    max-width: 100rem;
+    column-gap: 10rem;
+    font-size: 2rem;
+    list-style: none;
+    margin: 0 auto;
+    padding: 10vh 1.2rem 0;
+    
+}
+
+.layout_posts .nav_side .ul {
+    margin-bottom: 10rem;
+}
+
+.layout_posts .ul > li {
+    list-style: none;
+}
+
+@media (max-width:600px) {
+    .layout_posts {
+        grid-template-columns: 1fr;
+        font-size: 2.5rem;
+    }
+
+    .layout_posts .nav_side {
+        display: flex;
+    }
+}
