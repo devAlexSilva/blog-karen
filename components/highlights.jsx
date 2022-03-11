@@ -32,7 +32,7 @@ export default function HighLights({ field }) {
                             highlights.map((info) => {
                                 return (
                                     <ul key={info.uid} className={styles.item}>
-                                        <li><img alt={`imagem para ${info.uid}`} src={info.data.image.url} /></li>
+                                        <li><img loading='lazy' alt={`imagem para ${info.uid}`} src={info.data.image.url} /></li>
                                         <li className={styles.name}>{info.data.name[0].text}</li>
                                     </ul>
                                 );

@@ -10,13 +10,18 @@ export default function Header() {
                         <div>Destaques</div>
                     </Link>
                     <div style={{ cursor: 'default', border: 'none' }}>|</div>
-                    <div>Artes &#10138;</div>
+                    <Link href='/artes'>
+                        <div>Artes &#10138;</div>
+                    </Link>
                 </div>
                 <Link href='/'>
                     <div className={styles.center}>HOME</div>
                 </Link>
+
                 <div className={styles.right}>
-                    <div>Blog &#10138;</div>
+                    <Link href='/blog'>
+                        <div>Blog &#10138;</div>
+                    </Link>
                     <div style={{ cursor: 'default', border: 'none' }}>|</div>
                     <Link href='#about'>
                         <div>Sobre</div>

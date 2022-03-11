@@ -8,9 +8,7 @@ import SeparateSection from '../components/separateSection'
 export default function Index() {
   return (
     <Layout>
-      <Head>
-        <title>e.vearte - homePage</title>
-      </Head>
+      <Head><title>e.vearte - homePage</title></Head>
         <Home />
         <SeparateSection />
         <HighLights field='products'/>

@@ -8,3 +8,8 @@ export const getAllInDocument = async(fieldToFetch) => {
     const { results } = await client.query(Prismic.Predicates.at('document.type', fieldToFetch));
     return results;
 }
+
+export const getAllInPosts = async () =>{
+    const { results } = await client.query(Prismic.Predicates.at('document.type', 'posts'));
+    return results;
+}
