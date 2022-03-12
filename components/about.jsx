@@ -30,8 +30,8 @@ export default function About() {
                     </div>
                 }
                 <div className={styles.content}>
-                    <div className={styles.h1}><RichText render={dataSection.title} /></div>
-                    <div className={styles.p}><RichText render={dataSection.content} /></div>
+                    <div className={styles.h1}>{RichText.render(dataSection.title)}</div>
+                    <div className={styles.p}>{RichText.render(dataSection.content)}</div>
                 </div>
             </section>
         </>

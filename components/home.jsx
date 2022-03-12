@@ -22,15 +22,15 @@ export default function Home() {
                     <div className={styles.image}>
                         <Image
                             alt="imagem teste"
-                            width={dataSection.image?.dimensions.width}
-                            height={dataSection.image?.dimensions.height}
-                            src={dataSection?.image?.url}
+                            width={dataSection.image.dimensions.width}
+                            height={dataSection.image.dimensions.height}
+                            src={dataSection.image.url}
                         />
                     </div>
                 }
                 <div className={styles.content}>
-                    <div className={styles.h1}><RichText render={dataSection.title} /></div>
-                     <div className={styles.p}><RichText render={dataSection.content} /></div> 
+                    <div className={styles.h1} >{RichText.render(dataSection.title)}</div>
+                    <div className={styles.p}>{RichText.render(dataSection.content)}</div>
                 </div>
             </section>
         </>
