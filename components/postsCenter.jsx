@@ -2,13 +2,11 @@ import Head from "next/head";
 import styles from '../styles/PostsCenter.module.css'
 import Image from 'next/image'
 import { RichText } from "prismic-reactjs"
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getByUid } from '../prismic/query'
+import ImageOfBlog from "./imageOfBlog";
 
 export default function PostsCenter({ allPosts, post }) {
-    const router = useRouter()
 
     const [infoAllPosts, setInfoAllPosts] = useState([])
     const [dataHighLights, setDataHighLights] = useState([])
@@ -19,10 +17,9 @@ export default function PostsCenter({ allPosts, post }) {
             setInfoAllPosts(dataAllPosts);
             const dataOnePost = await getByUid([post])
             setDataHighLights(dataOnePost)
-
         }
         getData()
-    }, [])
+    }, [allPosts, post])
 
     return (
         <>
@@ -31,14 +28,14 @@ export default function PostsCenter({ allPosts, post }) {
                 <div className={styles.layout_posts}>
                     <article className={styles.destaque}>
                         <Image
+                            alt={`imagem para ${dataHighLights[0].slugs[0]}`}
                             src={dataHighLights[0].data.image.url}
-                            alt='image destaque'
                             height={1000}
                             width={1000}
                         />
-                        <div><RichText render={dataHighLights[0].tags[0]} /></div>
-                        <div><RichText render={dataHighLights[0].data.name} /></div>
-                        <div><RichText render={dataHighLights[0].data.content} /></div>
+                        <div>{RichText.render(dataHighLights[0].tags[0])}</div>
+                        <div>{RichText.render(dataHighLights[0].data.name)}</div>
+                        <div>{RichText.render(dataHighLights[0].data.content)}</div>
 
                     </article>
                     <nav className={styles.nav_side}>
@@ -46,17 +43,15 @@ export default function PostsCenter({ allPosts, post }) {
                             infoAllPosts.map((item) => {
                                 return (
                                     <ul key={item.uid} className={styles.ul}>
-                                        <li><RichText render={item.data.name} /></li>
+                                        <li>{RichText.render(item.data.name)}</li>
                                         <li className={styles.img} style={{ cursor: 'pointer' }}>
-                                            <Link href={`/post/${item.uid}`}>
-                                                <Image
-                                                    loading='lazy'
-                                                    alt={`imagem para ${item.uid}`}
-                                                    src={item.data.image.url}
-                                                    width={300}
-                                                    height={300}
-                                                />
-                                            </Link>
+                                            <ImageOfBlog
+                                                alt={`imagem para ${item.uid}`}
+                                                src={item.data.image.url}
+                                                height={300}
+                                                width={300}
+                                                uid={item.uid}
+                                            />
                                         </li>
                                         <li>{item.tags[0]}</li>
                                     </ul>

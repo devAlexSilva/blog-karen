@@ -1,11 +1,12 @@
+import Layout from "../../components/layout";
 import PostsCenter from "../../components/postsCenter";
 import { getAllInDocument } from "../../prismic/query";
 
 export default function Posts({allPostsUid, postUid}) {
     return (
-        <>
+        <Layout>
             <PostsCenter allPosts={allPostsUid} post={postUid}/>
-        </>
+        </Layout>
     )
 }
 

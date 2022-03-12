@@ -1,8 +1,7 @@
 import styles from '../styles/PostsCenter.module.css'
-import Image from 'next/image'
 import { RichText } from "prismic-reactjs"
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import ImageOfBlog from './imageOfBlog'
 
 export default function HomeBlogPosts({ allPosts }) {
     const router = useRouter()
@@ -11,9 +10,9 @@ export default function HomeBlogPosts({ allPosts }) {
         <div className={styles.layout_posts}>
             {!router.isFallback ? <>
                 <article className={styles.destaque}>
-                    <Image
+                    <ImageOfBlog
+                        alt={allPosts[0].slugs[0]}
                         src={allPosts[0].data.image.url}
-                        alt='image destaque'
                         height={1000}
                         width={1000}
                     />
@@ -21,7 +20,6 @@ export default function HomeBlogPosts({ allPosts }) {
                     <div><RichText render={allPosts[0].data.name} /></div>
                     <div><RichText render={allPosts[0].data.content} /></div>
                 </article>
-
                 <nav className={styles.nav_side}>
                     {
                         allPosts.map((item) => {
@@ -29,15 +27,13 @@ export default function HomeBlogPosts({ allPosts }) {
                                 <ul key={item.uid} className={styles.ul}>
                                     <li><RichText render={item.data.name} /></li>
                                     <li className={styles.img} style={{ cursor: 'pointer' }}>
-                                        <Link href={`/post/${item.uid}`}>
-                                            <Image
-                                                loading='lazy'
-                                                alt={`imagem para ${item.uid}`}
-                                                src={item.data.image.url}
-                                                width={300}
-                                                height={300}
-                                            />
-                                        </Link>
+                                        <ImageOfBlog
+                                            alt={`imagem para ${item.uid}`}
+                                            src={item.data.image.url}
+                                            height={300}
+                                            width={300}
+                                            uid={item.uid}
+                                        />
                                     </li>
                                     <li>{item.tags[0]}</li>
                                 </ul>
@@ -45,7 +41,10 @@ export default function HomeBlogPosts({ allPosts }) {
                         })
                     }
                 </nav>
-            </> : <div>loading...</div>
+            </> : <div style={{
+                display: 'grid', placeItems: 'center',
+                fontSize: '5rem', height: '90vh'
+            }}>loading...</div>
             }
         </div>
     )
