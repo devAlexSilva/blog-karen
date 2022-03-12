@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import PostsCenter from '../components/postsCenter'
-import { getAllInPosts } from "../prismic/query"
+import HomeBlogPosts from '../components/homeBlogPosts'
+import { getAllInDocument } from "../prismic/query"
 
 export default function Blog({ dataPosts }) {
 
@@ -9,14 +9,14 @@ export default function Blog({ dataPosts }) {
         <>
             <Layout>
                 <Head><title>e.vearte - Blog</title></Head>
-                <PostsCenter info={dataPosts} />
+                <HomeBlogPosts allPosts={dataPosts} />
             </Layout>
         </>
     )
 }
 
 export const getServerSideProps = async () => {
-    const dataPosts = await getAllInPosts();
+    const dataPosts = await getAllInDocument('posts');
 
     return {
         props: { dataPosts }
