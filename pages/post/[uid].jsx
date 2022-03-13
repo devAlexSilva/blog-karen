@@ -1,10 +1,12 @@
-import Layout from "../../components/layout";
-import PostsCenter from "../../components/postsCenter";
-import { getAllInDocument } from "../../prismic/query";
+import Layout from "../../components/layout"
+import Head from "next/head"
+import PostsCenter from "../../components/postsCenter"
+import { getAllInDocument } from "../../prismic/query"
 
-export default function Posts({allPostsUid, postUid}) {
+export default function Posts({ allPostsUid, postUid }) {
     return (
         <Layout>
+            <Head><title>e.vearte - posts</title></Head>
             <PostsCenter allPosts={allPostsUid} post={postUid}/>
         </Layout>
     )
@@ -16,8 +18,8 @@ export async function getServerSideProps({ params }) {
     let allPostsUid = []
     res.map(item => allPostsUid.push(item.uid))
     const postUid = allPostsUid.find(item => item === params.uid)
-    allPostsUid =   allPostsUid.filter(item => item !== postUid)
-    
+    allPostsUid = allPostsUid.filter(item => item !== postUid)
+
     return {
         props: { allPostsUid, postUid }
     }

@@ -1,31 +1,119 @@
 .layout_posts {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.header {
+    transform: translate3d(0, 0, 0);
+    min-height: 50rem;
+    position: relative;
+    z-index: -1;
+    height: auto;
+    padding-bottom: 6rem;
+    margin-top: 10vh;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgb(54, 41, 112);
+}
+
+.home {
+    color: #fff;
+    max-width: 100%;
+    margin: 8rem auto;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-left: 1.5rem; padding-right: 1.5rem;
+}
+
+
+.main {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.73);
+-webkit-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.73);
+-moz-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.73);
+
+    position: relative;
+    background-color: whitesmoke;
+    z-index: 1;
+    margin: -7rem 2rem -5rem;
+}
+
+.container {
     display: grid;
     grid-template-columns: 1fr 25rem;
-    max-width: 100rem;
-    column-gap: 10rem;
-    font-size: 2rem;
-    list-style: none;
-    margin: 0 auto;
-    padding: 10vh 1.2rem 0;
-    
+    column-gap: 8rem;
+    min-width: 100%;
+    padding: 10rem 7rem 5rem;
 }
 
-.layout_posts .nav_side .ul {
-    margin-bottom: 10rem;
+.container .nav_side .ul {
+    padding: 0 1rem;
+    margin: 1.5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.144);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
 }
 
-.layout_posts .ul > li {
+.container .ul > li {
     list-style: none;
     font-size: 1.5rem;
 }
 
+.container .ul > li:last-child {
+    border: .1rem solid rgba(0, 0, 0, 0.171);
+    border-radius: 5rem;
+    width: min-content;
+    padding: 0 1rem;
+    margin: 0 auto;
+    color: blue;
+}
+
+.container .ul > li:last-child:hover {
+    background-color: rgba(142, 223, 122, 0.438);
+}
+
+
+@media (max-width: 1200px) {
+    .main {
+        margin: -6rem 1.5rem 0;
+    }
+}
+
+@media (min-width: 990px) {
+    .home {
+        max-width: 97rem;
+    }
+
+    .container .highlights {
+        width: 66%;
+    }
+
+    .container {
+    max-width: 97rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .home {
+        max-width: 75rem;
+    }
+
+    .container {
+        max-width: 75rem;
+    }
+}
+
 @media (max-width:600px) {
-    .layout_posts {
+    .container {
         grid-template-columns: 1fr;
         font-size: 2.5rem;
     }
 
-    .layout_posts .nav_side {
+    .container .nav_side {
         display: flex;
     }
 }
