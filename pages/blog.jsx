@@ -7,8 +7,8 @@ export default function Blog({ dataPosts }) {
 
     return (
         <>
+            <Head><title>e.vearte - Blog</title></Head>
             <Layout>
-                <Head><title>e.vearte - Blog</title></Head>
                 <HomeBlogPosts allPosts={dataPosts} />
             </Layout>
         </>
