@@ -1,13 +1,13 @@
 import Layout from "../../components/layout"
 import Head from "next/head"
-import PostsCenter from "../../components/postsCenter"
+import PostsById from "../../components/postsById"
 import { getAllInDocument } from "../../prismic/query"
 
 export default function Posts({ allPostsUid, postUid }) {
     return (
         <Layout>
             <Head><title>e.vearte - posts</title></Head>
-            <PostsCenter allPosts={allPostsUid} post={postUid}/>
+            <PostsById allPosts={allPostsUid} post={postUid}/>
         </Layout>
     )
 }

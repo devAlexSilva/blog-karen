@@ -1,9 +1,12 @@
 .section {
   color: black;
-  margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.image {
+  order: 2;
 }
 
 .content {
@@ -33,9 +36,6 @@
   .section {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    height: max-content;
-    top: 0;
   }
 
 }
