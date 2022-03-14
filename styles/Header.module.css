@@ -9,11 +9,16 @@
     width: 100vw;
     font-size: 2.5rem;
     background-color: rgba(240, 248, 255);
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.24);
     font-style: italic;
 }
 
 .nav > div {
     display: flex;
+}
+
+.nav > div:not(.center) {
+    padding: 0 2rem;
 }
 
 

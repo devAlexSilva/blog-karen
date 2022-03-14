@@ -41,8 +41,9 @@ a {
 }
 
 section {
-  height: 90vh;
   width: 100vw;
+  height: max-content;
+  padding: 0 7rem;
 }
 
 @media (max-width: 768px){

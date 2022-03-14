@@ -1,12 +1,12 @@
 import Head from "next/head";
-import styles from '../styles/PostsCenter.module.css'
+import styles from '../styles/PostsById.module.css'
 import Image from 'next/image'
 import { RichText } from "prismic-reactjs"
 import { useEffect, useState } from 'react'
 import { getByUid } from '../prismic/query'
 import ImageOfBlog from "./imageOfBlog";
 
-export default function PostsCenter({ allPosts, post }) {
+export default function PostsById({ allPosts, post }) {
 
     const [infoAllPosts, setInfoAllPosts] = useState([])
     const [dataHighLights, setDataHighLights] = useState([])
@@ -25,19 +25,29 @@ export default function PostsCenter({ allPosts, post }) {
         <>
             <Head>{`e.vearte - ${dataHighLights[0]?.uid}`}</Head>
             {dataHighLights[0] &&
+
+
                 <div className={styles.layout_posts}>
-                    <article className={styles.destaque}>
+                    <header className={styles.header}>
                         <Image
                             alt={`imagem para ${dataHighLights[0].slugs[0]}`}
                             src={dataHighLights[0].data.image.url}
-                            height={1000}
+                            height={500}
                             width={1000}
+                            layout="responsive"
                         />
-                        <div>{RichText.render(dataHighLights[0].tags[0])}</div>
-                        <div>{RichText.render(dataHighLights[0].data.name)}</div>
-                        <div>{RichText.render(dataHighLights[0].data.content)}</div>
+                    </header>
+                    <div className={styles.main}>
+                        <div className={styles.container}>
+                            <article className={styles.destaque}>
+                                <div>{RichText.render(dataHighLights[0].tags[0])}</div>
+                                <div>{RichText.render(dataHighLights[0].data.name)}</div>
+                                <div>{RichText.render(dataHighLights[0].data.content)}</div>
+                            </article>
+                        </div>
+                    </div>
 
-                    </article>
+                    <h4 style={{margin:'20rem 0 2rem' , textAlign: 'center', fontSize: '5rem', opacity: '.8' }}>veja mais</h4>
                     <nav className={styles.nav_side}>
                         {
                             infoAllPosts.map((item) => {
@@ -60,6 +70,9 @@ export default function PostsCenter({ allPosts, post }) {
                         }
                     </nav>
                 </div>
+
+
+
             }
         </>
     )
