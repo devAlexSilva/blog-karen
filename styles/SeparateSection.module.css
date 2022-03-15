@@ -5,8 +5,9 @@
 }
 
 .break > hr {
-    border: 0;
-    height: 1rem;
+    border: none;
+    height: .7rem;
+    width: 80%;
     background-image: linear-gradient(to right, transparent, rgba(44, 42, 177, 0.308), transparent); 
 }
 

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
 
+:root {
+  --main-color1: #EBF3F8;
+  --main-color2: #FFFFFF;
+  --main-color3: #f3a36b;
+
+}
+
 html,
 body {
   padding: 0;
@@ -27,7 +34,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: linear-gradient(180deg, #ECE7E1, azure);
+  background-color: var(--main-color1);
 }
 
 a {
@@ -41,7 +48,6 @@ a {
 }
 
 section {
-  width: 100vw;
   height: max-content;
   padding: 0 7rem;
 }
