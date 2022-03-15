@@ -1,3 +1,7 @@
+.container {
+  min-height: 90vh;
+}
+
 .title_category {
   text-align: center;
   text-shadow: 2rem 1.2rem .5rem #9901ff;
@@ -15,6 +19,7 @@
 
 .container {
   max-width: 72vw;
+  margin: 0 auto;
 }
 
 .container .caroussel {
@@ -33,7 +38,6 @@
   padding: 1rem;
   width: 27rem;
   flex: none;
-  background-color: azure;
   border-radius: 1.2rem;
   border: .1rem solid black;
   list-style: none;
@@ -88,5 +92,11 @@
 @media (max-width:850px) {
   .container {
     max-width: 100vw;
+  }
+}
+
+@media (max-width:600px) {
+  .container .arrows {
+    display: none;
   }
 }
