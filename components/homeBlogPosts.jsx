@@ -1,4 +1,4 @@
-import styles from '../styles/PostsCenter.module.css'
+import styles from '../styles/HomeBlogPosts.module.css'
 import { RichText } from "prismic-reactjs"
 import { useRouter } from 'next/router'
 import ImageOfBlog from './imageOfBlog'
@@ -17,7 +17,12 @@ export default function HomeBlogPosts({ allPosts }) {
             </header>
 
             <main className={styles.main}>
-                    <h4 style={{paddingTop:'5rem' ,textAlign: 'center', fontSize: '5rem', opacity: '.8' }}>Mais Recentes</h4>
+                <h4 style={{
+                    paddingTop: '5rem',
+                    textAlign: 'center',
+                    fontSize: '5rem',
+                    opacity: '.8'
+                }}>Mais Recentes</h4>
                 <div className={styles.container}>
                     {!router.isFallback ? <>
                         <article className={styles.highlights}>

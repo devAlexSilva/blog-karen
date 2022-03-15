@@ -1,14 +1,14 @@
 .layout_posts {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     font-size: 2rem;
     line-height: 3rem;
 }
 
 .header {
+    min-height: 50rem;
     position: relative;
     z-index: -1;
-    height: auto;
-    padding-bottom: 6rem;
     margin-top: 10vh;
     overflow: hidden;
 }
@@ -22,7 +22,7 @@
     position: relative;
     background-color: whitesmoke;
     z-index: 1;
-    margin: -8rem 2rem -5rem;
+    margin: -6rem 2rem -5rem;
 }
 
 .container {
@@ -31,7 +31,7 @@
 
 .nav_side {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr 25rem);
     column-gap: 2rem;
 }
 
@@ -63,7 +63,10 @@
 .nav_side .ul > li:last-child:hover {
     background-color: rgba(142, 223, 122, 0.438);
 }
-
+.nav_side .ul > li:first-child::first-letter {
+    font-size: 5rem;
+    color: gray;
+}
 
 @media (max-width: 1200px) {
     .main {
@@ -71,10 +74,7 @@
     }
 }
 
-@media (max-width:600px) {
-    .main {
-        margin-top: -6rem;
-    }
+@media (max-width:600px) {    
     
     .container {
         font-size: 2.5rem;

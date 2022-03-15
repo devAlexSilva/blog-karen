@@ -1,10 +1,10 @@
-import Head from "next/head";
 import styles from '../styles/PostsById.module.css'
+import Head from "next/head"
+import ImageOfBlog from "./imageOfBlog"
 import Image from 'next/image'
 import { RichText } from "prismic-reactjs"
 import { useEffect, useState } from 'react'
 import { getByUid } from '../prismic/query'
-import ImageOfBlog from "./imageOfBlog";
 
 export default function PostsById({ allPosts, post }) {
 
@@ -25,17 +25,13 @@ export default function PostsById({ allPosts, post }) {
         <>
             <Head>{`e.vearte - ${dataHighLights[0]?.uid}`}</Head>
             {dataHighLights[0] &&
-
-
                 <div className={styles.layout_posts}>
                     <header className={styles.header}>
-                        <Image
-                            alt={`imagem para ${dataHighLights[0].slugs[0]}`}
-                            src={dataHighLights[0].data.image.url}
-                            height={500}
-                            width={1000}
-                            layout="responsive"
-                        />
+                            <Image
+                                alt={`imagem para ${dataHighLights[0].slugs[0]}`}
+                                src={dataHighLights[0].data.image.url}
+                                layout='fill'
+                            />
                     </header>
                     <div className={styles.main}>
                         <div className={styles.container}>
@@ -47,7 +43,7 @@ export default function PostsById({ allPosts, post }) {
                         </div>
                     </div>
 
-                    <h4 style={{margin:'20rem 0 2rem' , textAlign: 'center', fontSize: '5rem', opacity: '.8' }}>veja mais</h4>
+                    <h4 style={{ margin: '20rem 0 10rem', textAlign: 'center', fontSize: '5rem', opacity: '.8' }}>veja mais</h4>
                     <nav className={styles.nav_side}>
                         {
                             infoAllPosts.map((item) => {
