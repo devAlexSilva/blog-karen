@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 .container {
-  background-color: var(--main-color2);
+  background: var(--main-color2);
 }
 
 .section {
   color: #f9fafb;
   margin-top: 9vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   list-style: none;
   background-color: #011F51;
 }
+
+.section > div {
+  flex: 1 1 35rem;
+}
+
 .image {
   order: 2;
 }
@@ -19,7 +25,6 @@
   order: 1;
   display: flex;
   flex-direction: column;
-  flex: 0 0 50%;
   max-width: 50%;
   align-items: center;
   text-align: center;
@@ -84,19 +89,11 @@
 
 @media (max-width: 520px){
   .section {
-    display: flex;
     flex-direction: column;
-    height: max-content;
-    top: 0;
-  }
-
-  .content .h1 {
-    position: absolute;
-    top: 6vh;
   }
 
   .aside .ul .li .img,
   .aside .ul .li {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
   }
 }
