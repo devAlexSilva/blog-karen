@@ -9,30 +9,27 @@
     width: 100vw;
     font-size: 2.5rem;
     background-color: #011F51;
-    color: var(--main-color2);
+    color: #fff;
 }
 
 .nav > div {
     display: flex;
+    cursor: pointer;
 }
 
 .nav .center {
     position: relative;
-    cursor: pointer;
     font-weight: 600;
     opacity: .8;
 }
 
-.nav .left > div,
-.nav .right > div {
+.nav > div:not(.center) {
     margin: 1rem;
 }
 
-.nav .left > div:hover,
-.nav .right > div:hover {
-    border-bottom: .2rem solid salmon;
-    transition: 2s ease-in-out;
-    cursor: pointer;
+.nav > div:hover {
+    border-bottom: .2rem solid var(--main-color3);
+    transition: .3s ease-out;
 }
 
 @media (max-width:425px){

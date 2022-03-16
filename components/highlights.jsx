@@ -31,7 +31,7 @@ export default function HighLights({ field }) {
                     DESTAQUES: {field.toUpperCase()}
                 </h2>
                 <section className={styles.body}>
-                    <div className={styles.container}>
+                    <div className={styles.box}>
                         <div className={styles.caroussel} ref={carousselRef}>
                             {
                                 highlights.map((info) => {
