@@ -15,6 +15,8 @@ export default function HighLights({ field }) {
         fetchData();
     }, []);
 
+    let category = (field === 'products') ? 'produtos' : 'posts';
+
     const clickArrowLeft = () => {
         carousselRef.current.scrollLeft -= carousselRef.current.offsetWidth -
             (0.4 * carousselRef.current.offsetWidth);
@@ -28,7 +30,7 @@ export default function HighLights({ field }) {
         <>
             <div className={styles.container}>
                 <h2 className={styles.title_category} id='highlights'>
-                    DESTAQUES: {field.toUpperCase()}
+                    {category} em destaque
                 </h2>
                 <section className={styles.body}>
                     <div className={styles.box}>

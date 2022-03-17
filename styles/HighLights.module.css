@@ -6,10 +6,11 @@
 
 .title_category {
   text-align: center;
-  text-shadow: 2rem 1.2rem .5rem #9901ff;
   opacity: .9;
   font-size: 3rem;
-  margin: 10rem 0 0;
+  margin: 10rem 0 2rem;
+  text-decoration: underline wavy;
+  text-transform: uppercase;
 }
 
 .body {

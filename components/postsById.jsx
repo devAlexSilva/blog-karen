@@ -35,7 +35,7 @@ export default function PostsById({ allPosts, post }) {
                     </header>
                     <div className={styles.main}>
                         <div className={styles.container}>
-                            <article className={styles.destaque}>
+                            <article className={styles.highlights}>
                                 <div>{RichText.render(dataHighLights[0].tags[0])}</div>
                                 <div>{RichText.render(dataHighLights[0].data.name)}</div>
                                 <div>{RichText.render(dataHighLights[0].data.content)}</div>
