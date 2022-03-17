@@ -1,8 +1,9 @@
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from "react"
 import { getAllInDocument } from "../prismic/query"
 import { RichText } from 'prismic-reactjs'
-import Image from 'next/image'
 
 export default function Home() {
 
@@ -32,6 +33,9 @@ export default function Home() {
                     <div className={styles.content}>
                         <div className={styles.h1} >{RichText.render(dataSection.title)}</div>
                         <div className={styles.p}>{RichText.render(dataSection.content)}</div>
+                        <Link href={'https://api.whatsapp.com/send?phone=+558487143982'}>
+                            <button className={styles.btn_home}>Tire suas dúvidas</button>
+                        </Link>
                     </div>
                 </section>
 

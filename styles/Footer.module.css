@@ -11,13 +11,14 @@
     margin-top: 5rem;
 }
 
-.nav > div{
+.nav > a{
     font-size: 3.5rem;
     margin: 0 4%;
     color: #fff;
+    filter: drop-shadow(0 0 .5rem #00b9ff);
 }
 
-.nav > div:hover {
+.nav > a:hover {
     color: var(--main-color3);
     cursor: pointer;
     transform: scale(1.3);

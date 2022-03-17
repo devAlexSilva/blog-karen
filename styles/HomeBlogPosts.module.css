@@ -38,6 +38,14 @@
     margin: -10rem 2rem -5rem;
 }
 
+.main > h4 {
+    text-decoration: underline wavy;
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 5rem;
+    opacity: .8;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 25rem;

@@ -17,12 +17,8 @@ export default function HomeBlogPosts({ allPosts }) {
             </header>
 
             <main className={styles.main}>
-                <h4 style={{
-                    paddingTop: '5rem',
-                    textAlign: 'center',
-                    fontSize: '5rem',
-                    opacity: '.8'
-                }}>Mais Recentes</h4>
+                <h4>Mais Recentes</h4>
+                
                 <div className={styles.container}>
                     {!router.isFallback ? <>
                         <article className={styles.highlights}>

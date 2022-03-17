@@ -32,6 +32,10 @@
     letter-spacing: .105rem;
 }
 
+.highlights > :nth-child(3) {
+    word-wrap: break-word;
+}
+
 .nav_side {
     display: flex;
     flex-wrap: wrap;
