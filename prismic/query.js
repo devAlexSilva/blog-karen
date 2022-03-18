@@ -10,6 +10,11 @@ export const getAllInDocument = async(fieldToFetch) => {
 }
 //YAGNI *--*
 export const getByUid = async (postsByUid)=>{
-    const { results } = await client.query(Prismic.Predicates.any('my.posts.uid', postsByUid))
-    return results
+    const { results } = await client.query(Prismic.Predicates.any('my.posts.uid', postsByUid));
+    return results;
+}
+
+export const getArtesByTag = async (tag) => {
+    const { results } = await client.query(Prismic.Predicates.at('document.tags', [tag]));
+    return results;
 }

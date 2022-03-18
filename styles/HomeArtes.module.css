@@ -7,6 +7,7 @@
 .nav .category {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 4rem 0 0;
 }
@@ -31,8 +32,6 @@
     filter: drop-shadow(0 0 .2rem #00b9ff);
   }
   
-
-
 .section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -71,7 +70,7 @@
 }
 
 .container_wave {
-    height: 5rem; /* change the height of the waves here */
+    height: 5rem;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -109,22 +108,18 @@
 }
   
 @media (max-width:768px) {
-
-    
 .section .item li:nth-child(2) > h3 {
     font-size: 2.25rem;
-    text-align: center;
 }
 
 .section .item li:nth-child(3) > span {
     font-size: 2.4rem;
-    
     line-height: 3rem;
 }
+
 }
 
 @media (max-width:425px) {
-    
 .section {
     display: flex;
     flex-wrap: wrap;
