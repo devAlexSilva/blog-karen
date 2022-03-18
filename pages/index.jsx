@@ -6,12 +6,14 @@ import About from '../components/about'
 
 export default function Index() {
   return (
-    <Layout>
+    <>
       <Head><title>e.vearte - homePage</title></Head>
+    <Layout>
         <Home />
         <HighLights field='products'/>
         <About />
         <HighLights field='posts'/>
     </Layout>
+    </>
   )
 }

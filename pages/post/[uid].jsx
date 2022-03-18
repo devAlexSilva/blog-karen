@@ -5,10 +5,12 @@ import { getAllInDocument } from "../../prismic/query"
 
 export default function Posts({ allPostsUid, postUid }) {
     return (
-        <Layout>
+        <>
             <Head><title>e.vearte - posts</title></Head>
-            <PostsById allPosts={allPostsUid} post={postUid}/>
-        </Layout>
+            <Layout>
+                <PostsById allPosts={allPostsUid} post={postUid} />
+            </Layout>
+        </>
     )
 }
 

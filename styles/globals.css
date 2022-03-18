@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
 
 :root {
-  --main-color1: linear-gradient(180deg, #FFFFFF, #EBF3F8);
-  --main-color2: linear-gradient(180deg, #EBF3F8, #FFFFFF);
-  --main-color3: #f3a36b;
+  --main-color1: linear-gradient(#FFFFFF, #EBF3F8);
+  --main-color2: linear-gradient(#EBF3F8, #FFFFFF);
+  --main-color3: #deb887;
 
 }
 
@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: burlywood;
+  background: var(--main-color3);
   border-radius: 5rem;
 }
 
