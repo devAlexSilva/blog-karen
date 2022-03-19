@@ -10,6 +10,7 @@ export default function ImageOfBlog({ height, width, alt, src, uid }) {
             alt={alt}
             src={src}
             loading='lazy'
+            layout='responsive'
         />
     )
 

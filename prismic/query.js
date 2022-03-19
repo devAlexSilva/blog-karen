@@ -14,7 +14,7 @@ export const getByUid = async (postsByUid)=>{
     return results;
 }
 
-export const getArtesByTag = async (tag) => {
+export const getByTag = async (tag) => {
     const { results } = await client.query(Prismic.Predicates.at('document.tags', [tag]));
     return results;
 }

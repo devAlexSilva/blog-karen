@@ -43,7 +43,7 @@ export default function PostsById({ allPosts, post }) {
                         </div>
                     </div>
 
-                    <h4 style={{ margin: '20rem 0 10rem', textAlign: 'center', fontSize: '5rem', opacity: '.8' }}>veja mais</h4>
+                    <h4>veja mais</h4>
                     <nav className={styles.nav_side}>
                         {
                             infoAllPosts.map((item) => {

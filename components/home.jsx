@@ -27,6 +27,7 @@ export default function Home() {
                                 width={dataSection.image.dimensions.width}
                                 height={dataSection.image.dimensions.height}
                                 src={dataSection.image.url}
+                                priority
                             />
                         </div>
                     }

@@ -2,15 +2,15 @@ import { RichText } from 'prismic-reactjs'
 import Image from 'next/image'
 import styles from '../styles/HomeArtes.module.css'
 import { useCallback, useState } from 'react'
-import { getArtesByTag } from '../prismic/query'
+import { getByTag } from '../prismic/query'
 
 export default function HomeArtes({ props }) {
 
     const [art, setArts] = useState(props);
 
-    const getArtesByCategory = useCallback((tag) => {
+    const getArtsByCategory = useCallback((tag) => {
         const fetch = async () => {
-            let results = await getArtesByTag(tag);
+            let results = await getByTag(tag);
             setArts(results);
         }
         fetch();
@@ -26,9 +26,9 @@ export default function HomeArtes({ props }) {
             <div className={styles.container}>
                 <nav className={styles.nav}>
                     <ul className={styles.category}>
-                        <li><button onClick={() => getArtesByCategory('lettering')}>lettering</button></li>
-                        <li><button onClick={() => getArtesByCategory('desenho')}>desenho</button></li>
-                        <li><button onClick={() => getArtesByCategory('pintura')}>pintura</button></li>
+                        <li><button onClick={() => getArtsByCategory('lettering')}>lettering</button></li>
+                        <li><button onClick={() => getArtsByCategory('desenho')}>desenho</button></li>
+                        <li><button onClick={() => getArtsByCategory('pintura')}>pintura</button></li>
                         <li><button onClick={handleClickHeaderArts}>Todos</button></li>
                     </ul>
                 </nav>
@@ -47,12 +47,10 @@ export default function HomeArtes({ props }) {
                                             alt='imagem da arte'
                                         />
                                     </li>
-                                    <li><h3>{RichText.render(item.data.name)}</h3></li>
+                                    <li>{RichText.render(item.data.name)}</li>
                                     <li>
-                                        <span>
                                             Lorem ipsum dolor, sit amet consectetur
                                             adipisicing elit. Dolore ut officia placeat
-                                        </span>
                                     </li>
                                 </ul>
                             )
