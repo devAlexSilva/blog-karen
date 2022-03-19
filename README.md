@@ -1,8 +1,8 @@
 
 # e.vearte _Web Portal_
 
-construção do zero de um _Web Portal_ para uma amiga<br>
-contendo uma _Landing Page_, um _Blog_ e um _Ecommerce_.
+construção do zero de um _Web Portal_<br>
+contendo uma _Landing Page_, um _Blog_ e um _catálogo de produtos_.
 
 
 
