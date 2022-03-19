@@ -5,6 +5,15 @@
     line-height: 3rem;
 }
 
+.layout_posts > h4 {
+    margin: 20rem 0 10rem;
+    font-size: 5rem;
+    opacity: .8;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline wavy;
+}
+
 .header {
     min-height: 50rem;
     position: relative;
@@ -45,7 +54,7 @@
     flex: 1 1 25rem;
     padding: 0 1rem;
     margin: 1.5rem auto;
-    max-width: max-content;
+    max-width: 25rem;
     border: .1rem solid rgba(0, 0, 0, 0.144);
     border-radius: 1rem;
     box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);

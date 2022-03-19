@@ -39,11 +39,12 @@
 }
 
 .main > h4 {
-    text-decoration: underline wavy;
     padding-top: 5rem;
-    text-align: center;
     font-size: 5rem;
     opacity: .8;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline wavy;
 }
 
 .highlights {
@@ -64,14 +65,14 @@
 
 .aside {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     max-width: 100rem;
     margin: 10rem auto -5rem;
 }
 
 .aside .ul {
     margin: 0 auto;
+    min-width: 38rem;
     padding: 1rem;
     background-color: #fff;
     border-radius: 1.2rem;
@@ -97,10 +98,54 @@
     background-color: rgba(142, 223, 122, 0.438);
 }
 
+.nav {
+    padding: 5rem 0;
+}
+
+.nav > h3 {
+    padding-top: 10rem;
+    font-size: 5rem;
+    opacity: .8;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline dotted;
+}
+
+.nav .category {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.nav .category li > button {
+    padding: .75rem 1.5rem;
+    margin-top: 5rem;
+    color: #011F51;
+    background-color: var(--main-color3);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+    opacity: .8;
+  }
+  
+  .nav .category li > button:hover {
+    opacity: 1;
+    color: #fff;
+    filter: drop-shadow(0 0 .2rem #00b9ff);
+  }
+
 
 @media (max-width: 1024px) {
     .highlights > div:not(:nth-child(1)) {
         font-size: 2.1rem;
+    }
+    .aside .ul {
+        min-width: 30rem;
     }
 }
 
@@ -118,6 +163,10 @@
     .highlights > div:not(:nth-child(1)) {
         font-size: 2.5rem;
     }
+
+    .aside .ul {
+        min-width: 34rem;
+    }
 }
 
 @media (max-width: 425px) {
@@ -125,4 +174,17 @@
         max-width: 90%;
         padding: 0;
     }
+
+    .main {
+        margin: -10rem .8rem -5rem;
+    }
+
+    .main .highlights > div {
+        padding: .9rem;
+    }
+
+    .aside .ul {
+        max-width: 30rem;
+    }
+
 }
