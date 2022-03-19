@@ -10,7 +10,7 @@ export default function Footer() {
                         <div><i className="fa-brands fa-whatsapp"></i></div>
                     </a>
                 </Link>
-                <Link href={'https://www.instagram.com/devalexyz/'}>
+                <Link href={`https://www.instagram.com/${process.env.NEXT_PUBLIC_CONTACT_INSTA}/`}>
                     <a target='_blank'>
                         <div><i className="fa-brands fa-instagram"></i></div>
                     </a>

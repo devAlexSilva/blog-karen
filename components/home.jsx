@@ -34,7 +34,7 @@ export default function Home() {
                     <div className={styles.content}>
                         <div className={styles.h1} >{RichText.render(dataSection.title)}</div>
                         <div className={styles.p}>{RichText.render(dataSection.content)}</div>
-                        <Link href={'https://api.whatsapp.com/send?phone=+558487143982'}>
+                        <Link href={`https://api.whatsapp.com/send?phone=+${process.env.NEXT_PUBLIC_CONTACT_WHATS}`}>
                             <button className={styles.btn_home}>Tire suas dúvidas</button>
                         </Link>
                     </div>

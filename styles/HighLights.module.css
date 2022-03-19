@@ -53,7 +53,7 @@
 }
 
 .box .caroussel .item:hover {
-  transform: scale(1);
+  transform: scale(.85);
   transition: .2s ease-in;
 }
 

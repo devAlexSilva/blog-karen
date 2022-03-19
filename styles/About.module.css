@@ -33,6 +33,28 @@
   max-width: 50rem;
 }
 
+.content .btn_home {
+  margin: 3rem auto 0 ;
+  padding: 1.2rem;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  background-color: var(--main-color3);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6rem;
+  font-weight: 900;
+  color: #011F51;
+  cursor: pointer;
+  margin-bottom: 5rem;
+  opacity: .8;
+  border: none;
+  filter: drop-shadow(0 0 .5rem #00b9ff);
+}
+
+.content .btn_home:hover {
+  opacity: 1;
+  color: #fff;
+}
+
 @media (max-width: 520px){
   .section {
     display: flex;

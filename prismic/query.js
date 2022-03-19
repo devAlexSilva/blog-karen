@@ -1,6 +1,6 @@
 import Prismic from '@prismicio/client'
 
-const endPoint = 'https://blogkaren.prismic.io/api/v2';
+const endPoint = `https://${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/v2`;
 const client = Prismic.client(endPoint);
 
 
