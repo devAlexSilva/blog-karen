@@ -27,3 +27,19 @@ Em fase de desenvolvimento
 **Back-end:** Prismic (Headless CMS)
 
 
+## Screenshots
+
+
+<div>
+
+<br><br><div align="left"><p>home</p>
+<img src="https://user-images.githubusercontent.com/81701720/160212943-b258c5bb-b190-431e-b646-61c131cbd59c.png" align="left" alt="image of home pag" width="320" height="680"/>
+</div>
+
+<div align="right"><p>blog</p>
+<img src="https://user-images.githubusercontent.com/81701720/160213529-f0d782a0-3259-4aa8-a08b-5913cb9f9102.png" align="right" alt="image of blog page" width="320" height="680"/>
+</div>
+
+</div>
+
+
